@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Jetzt online Tickets buchen und in die Welt fliegen | Flybondi
+        </title>
+        <!-- favicon -->
+        <link
+            rel="shortcut icon"
+            href="./img/favicon.svg"
+            type="image/x-icon"
+        />
+        <!-- CSS link -->
+        <link rel="stylesheet" href="./css/styles.css" />
+        <!-- link ICONS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        />
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <!-- STARTET HEADER -->
+        <header>
+            <div class="headInfo">
+                <p class="logo lw">
+                    <a href="index.html">
+                        Fly<span class="spanLogo">bondi</span>
+                        <i class="fa-solid fa-feather"></i>
+                    </a>
+                </p>
+
+                <nav>
+                    <ul class="user">
+                        <li>
+                            <a href="./loginEmail.html">
+                                <i class="fa-solid fa-user"></i>
+                                <span class="noneUser"> Einloggen</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./404.html">
+                                <i class="fa-solid fa-user-plus"></i>
+                                <span class="noneUser">Registrieren</span></a
+                            >
+                        </li>
+                        <!-- Hamburger-Menu-Icon for mobile version -->
+                        <li>
+                            <i class="fa-solid fa-bars" id="menuBars"></i>
+                        </li>
+                    </ul>
+
+                    <ul class="menu">
+                        <li>
+                            <a href="./404.html" class="liLink"
+                                >meine buchungen</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./404.html" class="liLink">check-in</a>
+                        </li>
+                        <li>
+                            <a href="./404.html" class="liLink"
+                                >informationen</a
+                            >
+                        </li>
+                        <li><a href="./404.html" class="liLink">kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>Öffne deinen Horizont mit uns</h1>
+        </header>
+        <!-- ENDET HEADER -->
+
+        <!-- STARTET MAIN -->
+        <main class="indexMain grid">
+            <section>
+                <h2>Flüge</h2>
+                <form
+                    action="./flugauswahl.html"
+                    method="post"
+                    class="formMain"
+                >
+                    <div class="flugart">
+                        <ul>
+                            <li>
+                                <select name="escalas" id="escalas">
+                                    <option value="Hinrueck">
+                                        Hin- und Rückflug
+                                    </option>
+                                    <option value="nurHin">Nur Hinflug</option>
+                                    <option value="multi">Multi-Stopp</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="destionation">
+                        <ul>
+                            <li>
+                                <label for="von">Von *</label>
+                                <select name="von" id="von" required>
+                                    <option value="" selected disabled>
+                                        Abflugort
+                                    </option>
+                                    <option value="nizza">
+                                        Nizza NCE - Frankreich
+                                    </option>
+                                    <option value="tokio">
+                                        Tokio TYO - Japan
+                                    </option>
+                                    <option value="porto">
+                                        Porto OPO - Portugal
+                                    </option>
+                                    <option value="coruna">
+                                        A Coruna LCG - Spanien
+                                    </option>
+                                    <option value="oslo">
+                                        Oslo OSL - Norwegen
+                                    </option>
+                                    <option value="kopenhagen">
+                                        Kopenhagen CPH - Dänemark
+                                    </option>
+                                    <option value="berlin">
+                                        Berlin BER - Deutschland
+                                    </option>
+                                    <option value="frankfurt">
+                                        Frankfurt FRA - Deutschland
+                                    </option>
+                                    <option value="wien">
+                                        Wien VIE - Österreich
+                                    </option>
+                                    <option value="rom">
+                                        Rom FCO - Italien
+                                    </option>
+                                </select>
+                            </li>
+
+                            <li>
+                                <label for="nach">Nach *</label>
+                                <select name="nach" id="nach" required>
+                                    <option value="" selected disabled>
+                                        Zielort
+                                    </option>
+                                    <option value="wien">
+                                        Wien VIE - Österreich
+                                    </option>
+                                    <option value="frankfurt">
+                                        Frankfurt FRA - Deutschland
+                                    </option>
+                                    <option value="coruna">
+                                        A Coruna LCG - Spanien
+                                    </option>
+                                    <option value="kopenhagen">
+                                        Kopenhagen CPH - Dänemark
+                                    </option>
+                                    <option value="nizza">
+                                        Nizza NCE - Frankreich
+                                    </option>
+                                    <option value="rom">
+                                        Rom FCO - Italien
+                                    </option>
+                                    <option value="tokio">
+                                        Tokio TYO - Japan
+                                    </option>
+                                    <option value="oslo">
+                                        Oslo OSL - Norwegen
+                                    </option>
+                                    <option value="berlin">
+                                        Berlin BER - Deutschland
+                                    </option>
+                                    <option value="porto">
+                                        Porto OPO - Portugal
+                                    </option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="datum">
+                        <ul>
+                            <li>
+                                <label for="hin"> Hinflugdatum </label>
+                                <input
+                                    type="date"
+                                    name="hin"
+                                    id="hin"
+                                    required
+                                />
+                            </li>
+                            <li>
+                                <label for="back">Rückflugdatum</label>
+                                <input
+                                    type="date"
+                                    name="back"
+                                    id="back"
+                                    required
+                                />
+                            </li>
+                            <li>
+                                <label for="reiseklass" class="reiseklassLabel"
+                                    >Reiseklassen</label
+                                >
+                                <select name="reiseklass" id="reiseklass">
+                                    <option value="economy" selected>
+                                        Economy
+                                    </option>
+                                    <option value="premium">
+                                        Premium Economy
+                                    </option>
+                                    <option value="business">Business</option>
+                                    <option value="first">First</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pass">
+                        <ul>
+                            <li>
+                                <label for="erwachsene">Erwachsene</label>
+                                <input
+                                    type="number"
+                                    name="erwachsene"
+                                    id="erwachsene"
+                                    value="1"
+                                    min="0"
+                                    max="9"
+                                />
+                            </li>
+
+                            <li>
+                                <label for="kinder"
+                                    >Kinder <span>(2 bis 11 Jahre)</span></label
+                                >
+                                <input
+                                    type="number"
+                                    name="kinder"
+                                    id="kinder"
+                                    value="0"
+                                    min="0"
+                                    max="8"
+                                />
+                            </li>
+
+                            <li>
+                                <label for="baby"
+                                    >Kleinkinder ohne Sitz
+                                    <span>(bis 24 Monate)</span></label
+                                >
+                                <input
+                                    type="number"
+                                    name=""
+                                    id="baby"
+                                    value="0"
+                                    min="0"
+                                    max="4"
+                                />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <input
+                            type="submit"
+                            name="suchen"
+                            id="suchen"
+                            value="suchen"
+                            class="inputSubmit"
+                        />
+                    </div>
+                </form>
+            </section>
+        </main>
+        <!-- ENDET MAIN -->
+
+        <!-- STARTET FOOTER -->
+        <footer>
+            <div class="f1 grid">
+                <div class="zahlung">
+                    <h3>Zahlungsmöglichkeiten</h3>
+                    <ul>
+                        <li><i class="fa-brands fa-cc-visa"></i></li>
+                        <li><i class="fa-brands fa-cc-amex"></i></li>
+                        <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                        <li><i class="fa-brands fa-paypal"></i></li>
+                        <li><i class="fa-brands fa-google-pay"></i></li>
+                    </ul>
+                </div>
+                <div class="help">
+                    <h3>Hilfe nötig?</h3>
+                    <button><a href="./404.html">Help Center</a></button>
+                </div>
+                <div class="socialMedia">
+                    <h3>Folge uns</h3>
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank"
+                                ><i class="fa-brands fa-facebook"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"
+                                ><i class="fa-brands fa-instagram"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"
+                                ><i class="fa-brands fa-twitter"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="f2">
+                <hr />
+                <p class="logo lw">
+                    <a href="#">
+                        Fly<span class="spanLogo">bondi</span>
+                        <i class="fa-solid fa-feather"></i>
+                    </a>
+                </p>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#fluggastrechte.html">Fluggastrechte</a>
+                        </li>
+                        <li><a href="#datenschutz.html">Datenschutz</a></li>
+                        <li>
+                            <a href="#cookieEinstellungen.html"
+                                >Cookie-Einstellungen</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <!-- ENDET FOOTER -->
+
+        <!-- JS LINK -->
+        <script src="./js/menu.js"></script>
+    </body>
+</html>

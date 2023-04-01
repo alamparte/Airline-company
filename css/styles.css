@@ -1,0 +1,855 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/****Variables***/
+:root {
+    --bodyColor: #f4f4f4;
+    --mainColor: #051039;
+    --mainFont: "Alegreya Sans", sans-serif;
+    --footerbg: rgb(207, 177, 137);
+    --logo: #a83c06;
+    --hoverHeader: #c20;
+}
+html {
+    scroll-behavior: smooth;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+body {
+    font-family: var(--mainFont);
+    background-color: var(--bodyColor);
+    font-size: 1.1rem;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--mainColor);
+}
+/******LOGO******/
+.spanLogo,
+.nflug {
+    color: var(--logo);
+}
+.lw {
+    font-weight: 800;
+}
+header .logo {
+    font-size: 1.9rem;
+}
+footer .logo {
+    font-size: 1.7rem;
+    padding: 1.4rem 1rem;
+}
+select,
+input {
+    padding: 0.2rem;
+}
+input[type="checkbox"],
+input[type=radio] {
+    accent-color: var(--hoverHeader);
+    cursor: pointer;
+    transform: scale(1.2);
+    margin-right: 0.5rem;
+}
+button {
+    border: none;
+    background-color: transparent;
+}
+
+/**************INPUT submit*********************/
+.inputSubmit {
+    color: white;
+    background-color: var(--hoverHeader);
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.inputSubmit:hover {
+    background-color: rgb(225, 53, 19);
+}
+/******************BTN züruck***************************/
+.btnzueruck {
+    border: 1px solid var(--hoverHeader);
+    border-radius: 0.2rem;
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+    color: var(--hoverHeader);
+}
+.btnzueruck:hover {
+    border: 2px solid var(--hoverHeader);
+    background-color: rgb(235, 235, 235);
+}
+
+/*****FOOTER******/
+footer {
+    width: 100%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+}
+footer .f1 ul {
+    display: flex;
+}
+footer .f1 ul li {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+}
+footer .f1 h3 {
+    padding: 1rem;
+}
+footer .f1 button {
+    width: 100%;
+    margin: 1rem 0;
+}
+footer .f1 button a {
+    padding: 0.7rem 1.2rem;
+    border: 1px solid gray;
+    border-radius: 5%;
+}
+footer .f1 button a:hover {
+    background-color: rgb(228, 228, 228);
+}
+footer .f2,
+.f1 {
+    padding: 1rem;
+}
+footer .f2 nav ul li::before,
+.footerSimple li::before {
+    color: var(--mainColor);
+    content: "\f061";
+    font-family: FontAwesome;
+    padding-right: 0.4rem;
+}
+/******HEADER******/
+header .headInfo {
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+    background-color: var(--bodyColor);
+    padding: 0 1.4rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+header .headInfo nav ul {
+    display: flex;
+}
+header nav ul li {
+    padding: 0.6rem;
+}
+.fa-bars {
+    cursor: pointer;
+}
+.fa-bars:hover,
+.fa-user-plus:hover,
+.fa-user:hover {
+    color: var(--hoverHeader);
+}
+.noneUser {
+    display: none;
+}
+h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--hoverHeader);
+    margin-top: 7rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+/******menu list show*******/
+header .headInfo nav .menu {
+    position: fixed;
+    flex-direction: column;
+    top: -280px;
+    left: 5%;
+    width: 90%;
+    transition: transform 0.5s ease-in;
+    background-color: var(--bodyColor);
+    text-align: center;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.15);
+}
+header .headInfo nav .menu li {
+    margin: 0.7rem;
+    padding: 0.8rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid gray;
+}
+header .headInfo nav .menu.show {
+    transform: translateY(130%);
+}
+
+/*****MAIN GRID LAYOUT für alle Seiten****/
+.grid {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+/****** INDEX MAIN html************/
+.indexMain section {
+    width: 90%;
+    background-color: white;
+    padding: 1.5rem;
+    margin: 1rem 0 3rem 0;
+    border-radius: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.indexMain h2 {
+    font-size: 2rem;
+}
+.formMain li,
+.formMain label {
+    padding: 0.5rem;
+}
+.formMain .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7rem;
+}
+.formMain .btn #suchen {
+    width: 85%;
+    text-transform: uppercase;
+}
+.formMain input,
+.formMain select {
+    border: none;
+    border-bottom: 1px solid rgb(169, 169, 169);
+    width: 100%;
+    outline: none;
+    font-size: 1.07rem;
+}
+.formMain input[type="text"]:focus,
+.formMain input[type="number"]:focus,
+.formMain select:focus {
+    border-bottom: 2px solid #c20;
+}
+.pass span {
+    font-size: 0.95rem;
+    color: var(--mainColor);
+    font-weight: 500;
+}
+
+/*****flugauswahl HTML*****/
+.auswhalMain .cards {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 1rem 0 3rem 0;
+    gap: 1.2rem;
+}
+/***h2 + button UMBUCHEN***/
+.headBtn {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+.headBtn button a {
+    background-color: rgb(227, 227, 227);
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    padding: 0.7rem 1.1rem;
+    font-size: 0.9rem;
+}
+.headBtn a:hover {
+    background-color: #cecece;
+}
+.fa-pen {
+    color: var(--mainColor);
+}
+/**CARDS**/
+.cards .card {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.card:hover {
+    box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2);
+}
+.card .logo {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.card .infoFlug .zeileA,
+.card .infoFlug .zeileB {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid gainsboro;
+}
+.card .time {
+    font-weight: 700;
+}
+.card .direkt {
+    text-align: center;
+    color: green;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.card .destino {
+    text-align: end;
+}
+.card .preis {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-weight: 800;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+.card .preis button a {
+    padding: 0.7rem 1.4rem;
+    background-color: var(--hoverHeader);
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.card .preis a:hover {
+    background-color: rgb(225, 53, 19);
+}
+
+/***********buchungDetails HTML*****************/
+.buchungMain {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    margin: 1rem 0 3rem 0;
+}
+.buchungMain .head,
+.buchungMain .buchung,
+.buchungMain .formDetails {
+    width: 90%;
+}
+.buchungMain .buchung {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1.3rem;
+}
+.buchungMain .buchung .details {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.7rem;
+}
+.details .rueckDetails,
+.details .hinDetails {
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+}
+.buchungMain .buchung .details .price {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.buchungMain .buchung .details .price .passPreis {
+    text-align: end;
+}
+.buchungMain .buchung .details .price .pc {
+    font-size: 1.7rem;
+    display: block;
+    font-weight: 700;
+}
+.details h3 {
+    text-transform: uppercase;
+}
+.details p {
+    padding: 0.5rem 0;
+}
+.dia {
+    font-weight: 600;
+}
+
+.btnForm {
+    display: flex;
+    justify-content: space-between;
+}
+.formDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+/*****daten HTML*****/
+.datenSection .flugDaten {
+    display: none;
+}
+.datenSection {
+    width: 100%;
+    padding: 1.5rem;
+    display: grid;
+    gap: 2rem;
+}
+.datenSection .passagiere h3 {
+    padding-bottom: 1rem;
+}
+.datenSection .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+/**********daten + karteDaten input layout *********/
+.inputDaten {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.inputDaten input[type="text"],
+.inputDaten input[type="email"],
+.inputDaten input[type="number"],
+.inputDaten input[type="password"] {
+    padding: 1rem;
+    font-size: 1.05rem;
+    border: none;
+    background-color: var(--bodyColor);
+    border-radius: 0.2rem;
+}
+.inputDaten input:focus {
+    outline: none;
+    border: 2px solid var(--hoverHeader);
+    border-radius: 0.2rem;
+}
+.datenSection .passagiere,
+.datenSection .kontakt,
+.kSection form {
+    padding: 2rem 1.5rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*****zahlungsart HTML*****/
+.bezahlMain .zahlart {
+    width: 90%;
+    display: grid;
+    gap: 1.5rem;
+    margin: 1rem 0 3rem 0;
+}
+.bezahlMain .zahlart form {
+    background-color: white;
+    border: 1px solid gray;
+    min-height: 2rem;
+    box-shadow: 0.8px 7px 7px 2.5px rgba(0, 0, 0, 0.2);
+    border-radius: 0.2rem;
+}
+.bezahlMain .zahlart form ul li {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgb(167, 167, 167);
+}
+.bezahlMain .zahlart form ul li:hover {
+    transform: scale(1.0002);
+    border: 1px solid var(--hoverHeader);
+    transition: all 0.5s ease-in-out;
+}
+/**********karteDaten // zahlungsart // daten HTML*************/
+.zahlart .preis p,
+.datenSection .flugDaten .flugP,
+.kDaten .flugP {
+    display: flex;
+    justify-content: space-between;
+}
+.bezahlMain .preis p,
+.kDaten .flugP {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.bezahlMain .buttons {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+.bezahlMain .buttons button a {
+    display: block;
+}
+.bezahlMain label > a {
+    color: #5a78e6;
+}
+/**********karteDaten HTML*************/
+.kDaten .kSection {
+    width: 90%;
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0 3rem 0;
+}
+.kDaten .kSection .infoErhalten {
+    background-color: white;
+    box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+}
+.kDaten .kSection .infoErhalten h3 {
+    border-bottom: 1px solid rgb(167, 167, 167);
+    padding: 1rem 0.5rem;
+    background-color: #bfc8eb;
+}
+.kDaten .kSection .infoErhalten ol {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+/*****bestätigung HTML*****/
+.confirmHeader,
+.confirmFooter {
+    padding: 2rem;
+}
+.confirmMain {
+    align-content: center;
+    gap: 1.2rem;
+    min-height: 40rem;
+    padding: 0 1rem;
+    margin: 0 0 3rem 0;
+}
+.confirmMain figure {
+    width: 12rem;
+}
+.confirmMain figure img {
+    width: 100%;
+}
+.confirmMain h1 {
+    margin: 0;
+}
+.confirmMain button,
+.errorSeite button {
+    margin-top: 3rem;
+}
+.confirmMain button a,
+.errorSeite button a {
+    color: white;
+    background-color: var(--hoverHeader);
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.confirmMain button a:hover,
+.errorSeite button a:hover {
+    background-color: rgb(225, 53, 19);
+}
+/*****404 HTML******/
+.errorSeite {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+.errorSeite figure .imgxl {
+    display: none;
+}
+.text1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.errorSeite figure {
+    margin: 2rem 0;
+}
+.errorSeite figure .imgxs {
+    width: 14rem;
+}
+/****loginEmail // loginPass******/
+.mainLogin .login {
+    width: 90%;
+    display: grid;
+    gap: 3rem;
+    background-color: white;
+    padding: 2rem 1rem 4rem 1rem;
+    box-shadow: 1px 4px 10px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.2rem;
+    margin: 2rem 0;
+}
+.mainLogin .login form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+}
+.login input[type="submit"] {
+    text-transform: uppercase;
+}
+.loginH button {
+    margin: 2rem 0;
+}
+.loginH button a {
+    font-size: 1rem;
+}
+.loginH button a:hover {
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 620px) {
+    /***buchungDetails HTML**/
+    .details .hinDetails,
+    .details .rueckDetails {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+    }
+    /*****zahlungsart HTML*****/
+    .bezahlMain .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+}
+@media only screen and (min-width: 770px) {
+    /*hide Hamburger-Menu-Icon*/
+    /******HEADER****/
+    .user .fa-bars {
+        display: none;
+    }
+    .noneUser,
+    .menu {
+        display: inline-block;
+    }
+    header .headInfo nav .menu {
+        width: 100%;
+        transition: none;
+        position: relative;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+    }
+    header .headInfo nav .menu li {
+        border: none;
+        margin: 0;
+    }
+    header .headInfo nav .menu.show {
+        transform: none;
+    }
+    header .headInfo {
+        padding: 1.5rem;
+    }
+    header nav .user {
+        justify-content: end;
+    }
+    header nav a:hover {
+        color: var(--hoverHeader);
+        border-bottom: 1px solid var(--hoverHeader);
+    }
+    h1 {
+        padding: 2.9rem 0 2rem 0;
+    }
+
+    /*FOOTER*/
+    footer .f1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    footer .f2 nav ul {
+        display: flex;
+    }
+    .f2 nav ul li {
+        padding: 0.5rem;
+    }
+
+    /**** index MAIN*****/
+    .indexMain {
+        width: 100%;
+        min-height: 45rem;
+        background-image: url(../img/fondo.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+    }
+    .indexMain section {
+        width: 80%;
+        max-width: 1160px;
+        margin: 1rem 0;
+    }
+    .formMain li,
+    .formMain label {
+        display: inline-block;
+    }
+    .formMain .btn {
+        justify-content: end;
+    }
+    .formMain .btn #suchen {
+        width: 25%;
+    }
+
+    /*****auswahl HTML******/
+    .auswhalMain .cards {
+        max-width: 900px;
+    }
+    .cards .card {
+        display: grid;
+        grid-template-columns: 75% 25%;
+    }
+    .card .preis {
+        border-left: 1px solid gainsboro;
+        padding: 0 0 0 1rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .card .infoFlug .zeileB {
+        border: none;
+    }
+
+    /*****buchungDetails HTML*****/
+    .buchungMain .buchung {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .buchungMain .buchung .img {
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/cover.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .buchung .details .hinDetails,
+    .buchung .details .rueckDetails {
+        width: 100%;
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-between;
+    }
+    .formDetails {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .formDetails .btnForm {
+        gap: 1.3rem;
+    }
+
+    /******daten HTML****/
+    .datenSection .flugDaten {
+        display: block;
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 0.2rem;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .datenSection {
+        grid-template-areas:
+            "head      head"
+            "passForm  flugInfo"
+            "kontForm  flugInfo"
+            " .        btn";
+        margin-bottom: 2rem;
+    }
+    .datenSection h2 {
+        grid-area: head;
+    }
+    .datenSection .passagiere {
+        grid-area: passForm;
+    }
+    .datenSection .kontakt {
+        grid-area: kontForm;
+    }
+    .datenSection .buttons {
+        grid-area: btn;
+    }
+    .datenSection .flugDaten {
+        grid-area: flugInfo;
+        display: grid;
+        gap: 0.5rem;
+        height: 25rem;
+    }
+    .datenSection .flugDaten hr {
+        height: 1px;
+    }
+    .datenSection .flugDaten .flugP span,
+    .bezahlMain .preis p {
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+    /******daten HTML****/
+    /*****zahlungsart HTML*****/
+    .bezahlMain .zahlart,
+    .kDaten .kSection {
+        max-width: 800px;
+    }
+    /******karteDaten****/
+    .kDaten .btnForm {
+        justify-content: end;
+        gap: 1rem;
+    }
+    /*****bestätigung HTML*****/
+    .confirmMain {
+        margin-bottom: 5.5rem;
+    }
+    .footerSimple {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+    .confirmFooter {
+        min-height: 7rem;
+    }
+    .confirmMain p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    /*****buchungDetails HTML*******/
+    /******daten HTML****/
+    .buchungMain .head,
+    .buchung,
+    .formDetails,
+    .datenSection {
+        max-width: 1100px;
+    }
+    /******daten HTML****/
+    .datenSection .flugDaten {
+        width: 80%;
+        justify-self: end;
+    }
+    /*****404 HTML******/
+    .errorSeite figure .imgxl {
+        display: block;
+    }
+    .errorSeite figure .imgxs {
+        display: none;
+    }
+    /****loginEmail // loginPass******/
+    .mainLogin .login {
+        max-width: 770px;
+    }
+    .loginH button a {
+        padding: 1.3rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    /*MAIN index*/
+    .indexMain {
+        min-height: 40rem;
+    }
+    /*FOOTER*/
+    footer .f1,
+    .f2 {
+        max-width: 1260px;
+        margin: 0 auto;
+    }
+    /******daten HTML****/
+    .datenSection {
+        padding: 0;
+        margin-bottom: 4rem;
+    }
+}

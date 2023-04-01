@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Buchung | Flybondi</title>
+        <!-- favicon -->
+        <link
+            rel="shortcut icon"
+            href="./img/favicon.png"
+            type="image/x-icon"
+        />
+        <!-- CSS link -->
+        <link rel="stylesheet" href="./css/styles.css" />
+        <!-- link ICONS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        />
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- STARTET HEADER -->
+        <header>
+            <div class="headInfo">
+                <p class="logo lw">
+                    <a href="./index.html">
+                        Fly<span class="spanLogo">bondi</span>
+                        <i class="fa-solid fa-feather"></i>
+                    </a>
+                </p>
+
+                <nav>
+                    <ul class="user">
+                        <li>
+                            <a href="./loginEmail.html">
+                                <i class="fa-solid fa-user"></i>
+                                <span class="noneUser"> Einloggen</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./404.html">
+                                <i class="fa-solid fa-user-plus"></i>
+                                <span class="noneUser">Registrieren</span></a
+                            >
+                        </li>
+                        <!-- Hamburger-Menu-Icon for mobile version -->
+                        <li>
+                            <i class="fa-solid fa-bars" id="menuBars"></i>
+                        </li>
+                    </ul>
+                    <ul class="menu">
+                        <li><a href="./404.html" class="liLink">meine buchungen</a></li>
+                        <li><a href="./404.html" class="liLink">check-in</a></li>
+                        <li><a href="./404.html" class="liLink">informationen</a></li>
+                        <li><a href="./404.html" class="liLink">kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>Ihre Reise nach Nizza</h1>
+        </header>
+        <!-- ENDET HEADER -->
+
+        <!-- STARTET MAIN -->
+        <main class="buchungMain grid">
+            <section class="head headBtn">
+                <h2>Ihre Buchung nach Nizza</h2>
+                <button type="button">
+                    <a href="./index.html"
+                        ><i class="fa-solid fa-pen"></i> umbuchen</a
+                    >
+                </button>
+            </section>
+
+            <section class="buchung">
+                <!--DIV for cover img through CSS -->
+                <div class="img"></div>
+
+                <div class="details">
+                    <h3>Hinflug</h3>
+                    <div class="hinDetails">
+                        <div class="infoOrt">
+                            <p class="dia">Di., 22. Aug. 2023</p>
+                            <p>07:15 Wien International (VIE)</p>
+                            <p>09:20 Nizza (NCE)</p>
+                        </div>
+                        <div>
+                            <p class="time">Reisedauer: 2St. 05Min.</p>
+                            <p>Economy</p>
+                        </div>
+
+                        <div class="flugLinie">
+                            <p class="logo lw">
+                                Fly<span class="spanLogo">bondi</span>
+                                <i class="fa-solid fa-feather"></i>
+                            </p>
+                            <span class="nflug">FY409</span>
+                        </div>
+                    </div>
+                    <!-- <hr /> -->
+
+                    <h3>Rückflug</h3>
+                    <div class="rueckDetails">
+                        <div class="infoOrt">
+                            <p class="dia">Fr., 25. Aug. 2023</p>
+                            <p>15:35 Nizza (NCE)</p>
+                            <p>17:30 Wien International (VIE)</p>
+                        </div>
+                        <div>
+                            <p class="time">Reisedauer: 1St. 55Min.</p>
+                            <p>Economy</p>
+                        </div>
+                        <div class="flugLinie">
+                            <p class="logo lw">
+                                Fly<span class="spanLogo">bondi</span>
+                                <i class="fa-solid fa-feather"></i>
+                            </p>
+                            <span class="nflug">FY409</span>
+                        </div>
+                    </div>
+                    <!-- <hr /> -->
+                    <div class="price">
+                        <p>Gesamtpreis</p>
+                        <p class="passPreis">
+                            Ticketpreis für 1 Passagier
+                            <span class="pc">EUR 191</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <form action="./daten.html" method="post" class="formDetails">
+                <div class="box">
+                    <input
+                        type="checkbox"
+                        name="confirm"
+                        id="confirm"
+                        required
+                    />
+                    <label for="confirm"
+                        >Bestätigen Sie, ob alle Buchungsdetails stimmen</label
+                    >
+                </div>
+                <div class="btnForm">
+                    <button type="button">
+                        <a href="./flugauswahl.html" class="btnzueruck">züruck</a>
+                    </button>
+                    <input
+                        type="submit"
+                        name="passDaten"
+                        id="passDaten"
+                        value="Passagierdaten eintragen"
+                        class="inputSubmit"
+                    />
+                </div>
+            </form>
+        </main>
+        <!-- ENDET MAIN -->
+
+        <!-- STARTET FOOTER -->
+        <footer>
+            <div class="f1 grid">
+                <div class="zahlung">
+                    <h3>Zahlungsmöglichkeiten</h3>
+                    <ul>
+                        <li><i class="fa-brands fa-cc-visa"></i></li>
+                        <li><i class="fa-brands fa-cc-amex"></i></li>
+                        <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                        <li><i class="fa-brands fa-paypal"></i></li>
+                        <li><i class="fa-brands fa-google-pay"></i></li>
+                    </ul>
+                </div>
+                <div class="help">
+                    <h3>Hilfe nötig?</h3>
+                    <button><a href="./404.html">Help Center</a></button>
+                </div>
+                <div class="socialMedia">
+                    <h3>Folge uns</h3>
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank"
+                                ><i class="fa-brands fa-facebook"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"
+                                ><i class="fa-brands fa-instagram"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"
+                                ><i class="fa-brands fa-twitter"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="f2">
+                <hr />
+                <p class="logo lw">
+                    <a href="./index.html">
+                        Fly<span class="spanLogo">bondi</span>
+                        <i class="fa-solid fa-feather"></i>
+                    </a>
+                </p>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#fluggastrechte.html">Fluggastrechte</a>
+                        </li>
+                        <li><a href="#datenschutz.html">Datenschutz</a></li>
+                        <li>
+                            <a href="#cookieEinstellungen.html"
+                                >Cookie-Einstellungen</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <!-- ENDET FOOTER -->
+
+         <!-- JS LINK -->
+         <script src="./js/menu.js"></script>
+    </body>
+</html>
